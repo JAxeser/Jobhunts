@@ -75,7 +75,6 @@ const SignupForm = () => {
   return (
      <Form {...form}>
     <div className="sm:w-420 flex-center flex-col">
-      <img src="/assets/images/logo.svg" alt="logo"/>
 
       <h2 className="sm:pt-12">Create a new Account</h2>
       <p className="text-light-3 small-medium md:base-regular mt-2">To use LocateMe enter your account details</p>
