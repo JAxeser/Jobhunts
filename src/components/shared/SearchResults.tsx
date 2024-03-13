@@ -8,9 +8,10 @@ type SearchResultsProps = {
 }
 const SearchResults = ({isSearchFetching, searchedPosts}: SearchResultsProps) => {
   if(isSearchFetching) return <Loader/>
-
+  // @ts-ignore
   if(searchedPosts && searchedPosts.documents.length > 0) {
     return (
+      // @ts-ignore
   <GridPostList posts={searchedPosts.documents}/>)}
   return (
    <p className="text-light-4 mt-10 text-center w-full">No Results Found</p>

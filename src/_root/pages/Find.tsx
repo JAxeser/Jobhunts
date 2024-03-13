@@ -46,6 +46,7 @@ const Explore = () => {
 
   const shouldShowSearchResults = searchValue !== "";
   const shouldShowPosts = !shouldShowSearchResults && 
+  // @ts-ignore
     posts.pages.every((item) => item.documents.length === 0);
 
   return (
@@ -96,6 +97,7 @@ const Explore = () => {
           <p className="text-light-4 mt-10 text-center w-full">End of posts</p>
         ) : (
           posts.pages.map((item, index) => (
+            // @ts-ignore
             <GridPostList key={`page-${index}`} posts={item.documents} />
           ))
         )}
