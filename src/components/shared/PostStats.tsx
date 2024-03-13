@@ -70,8 +70,7 @@ const PostStats = ({post, userId}: PostStatsProps) => {
     {isSavingPost || isDeletingSaved ? <Loader/>: 
   <img
   src={isSaved 
-    ? "/assets/icons/saved.svg" 
-    : "/assets/icons/save.svg"}
+    ? "/assets/icons/saved.svg" : "/assets/icons/save.svg"}
   
   alt="like"
   width={20}
