@@ -131,12 +131,12 @@ const PostForm = ({post, action}: PostFormProps) => {
           name="tags"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="shad-form_label">Add Tags(separated by comma " , ")</FormLabel>
+              <FormLabel className="shad-form_label">Add Contact Details</FormLabel>
               <FormControl>
                 <Input 
                 type="text" 
                 className="shad-input"
-                placeholder="Located, Location, Missing" {...field}
+                placeholder="Email, Phone no." {...field}
                 />
               </FormControl>
               <FormMessage className="shad-form_message"/>
