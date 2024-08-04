@@ -16,7 +16,13 @@ const FileUploader = ({fieldChange, mediaUrl}: FileUploaderProps) => {
         fieldChange(acceptedFiles);
         setFileUrl(URL.createObjectURL(acceptedFiles[0]))
       }, [file])
-      const {getRootProps, getInputProps} = useDropzone({onDrop, accept: {'image/*': ['.png', '.jpeg', '.jpg', '.svg']}})
+      const {getRootProps, getInputProps} = useDropzone({onDrop, accept: {'image/*': ['.png', '.jpeg', '.jpg', '.svg'],
+        "application/pdf": [".pdf"],
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+          [".docx"],
+        "application/msword": [".doc"],
+        "text/plain": [".txt"],
+      }})
   return (
     <div {...getRootProps()} className="flex flex-center flex-col bg-dark-3 rounded-xl cursor-pointer">
       <input {...getInputProps()} className="cursor-pointer"/>
